@@ -16,6 +16,7 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -30,18 +31,25 @@
       }
       /* styleing for mobile */
       #outer-cont {
-        padding: 20px;
+        padding: 50px;
+      }
+      h1, p {
+        font-family: Spartan;
+      }
+      p {
+        font-size: 15px;
       }
 
       h1 {
         text-align: center;
         margin-bottom: 15px;
-        /* style font and color */
+        color: hsl(300, 43%, 22%);
       }
       #description {
         text-align: center;
         margin-bottom: 30px;
-        /* style font and color */
+        color: hsl(303, 10%, 53%);
+        font-weight: 100;
       }
 
 
@@ -53,17 +61,19 @@
         background-color: hsl(300, 24%, 96%);
       }
       .reviews h4 {
-        margin-top: 5px;
-        /* style the color and font */
+        margin-top: 7px;
+        color: hsl(300, 43%, 22%);
+        font-weight: 700;
+        font-size: 15px;
       }
       .reviews:nth-of-type(1) {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
       }
       .reviews:nth-of-type(2) {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
       }
       .reviews:nth-of-type(3) {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
       }
 
       /* styling written reviews */
@@ -85,11 +95,25 @@
       .review-profile {
         display: flex;
         margin-bottom: 30px;
+        line-height: 20px;
+      }
+      .review-profile  p {
+        /* styling the name of the reviewer */
+        color: hsl(300, 24%, 96%);
+      }
+      .review-profile span {
+        /* styling the verfied buyer  */
+        color: hsl(333, 80%, 67%);
       }
       .profile-img {
         border-radius: 100%;
         width: 40px;
         margin-right: 20px;
+      }
+      .review-text{
+        color: hsl(300, 24%, 96%);
+        line-height: 20px;
+        font-weight: 100;
       }
     </style>
   </head>
@@ -121,16 +145,16 @@
         <div class="written-reviews">
           <div class="review-profile">
             <img class="profile-img" src="images/image-colton.jpg" alt="">
-            <p class="review-name">Colton Smith<br>Verified Buyer</p> 
+            <p class="review-name">Colton Smith<br><span>Verified Buyer</span></p>
           </div>  
           <p class="review-text">"We needed the same printed design as the one we had ordered a week prior.
           Not only did they find the original order, but we also received it in time.
           Excellent!"</p>
-        </div>  
+        </div> 
         <div class="written-reviews">
           <div class="review-profile">
             <img class="profile-img" src="images/image-irene.jpg" alt="">
-            <p class="review-name">Irene Roberts<br>Verified Buyer</p> 
+            <p class="review-name">Irene Roberts<br><span>Verified Buyer</span></p> 
           </div>  
           <p class="review-text">"Customer service is always excellent and very quick turn around. Completely
           delighted with the simplicity of the purchase and the speed of delivery."</p>
@@ -138,13 +162,14 @@
         <div class="written-reviews">
           <div class="review-profile">
             <img class="profile-img" src="images/image-anne.jpg" alt="">
-            <p class="review-name">Anne Wallace<br>Verified Buyer</p> 
+            <p class="review-name">Anne Wallace<br><span>Verified Buyer</span></p> 
           </div>  
           <p class="review-text">"Put an order with this company and can only praise them for the very high
           standard. Will definitely use them again and recommend them to everyone!"</p>
         </div>  
       </div>  
     </div>  
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
