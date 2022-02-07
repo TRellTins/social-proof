@@ -115,16 +115,80 @@
         line-height: 20px;
         font-weight: 100;
       }
+
+      /* screen sizes above 1440px */
+      @media only screen and (min-width: 1200px) {
+        #outer-cont {
+          padding: 100px 200px;
+        }
+
+        #desktop-view-top-cont {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        /* styling h1 and p */
+        #review-title-description {
+          flex-basis: 50%;
+        }
+        #review-title-description h1 {
+          text-align: start;
+          width: 250px;
+        }
+        #review-title-description p {
+          text-align: start;
+          line-height: 20px;
+          width: 350px;  
+        }
+
+        /* styling star reviews */
+        #star-reviews-cont {
+          flex-basis: 50%;
+        }
+        .reviews {
+          display: flex;
+          width: 400px;
+          justify-content: space-evenly;
+        }
+        .reviews:nth-of-type(1){
+          margin-left: -60px;
+          margin-bottom: 15px;
+        }
+        .reviews:nth-of-type(2){
+          margin-left: -30px;
+          margin-bottom: 15px;
+        }
+        .reviews:nth-of-type(3){
+          margin-left: 10px;
+        }
+
+        /* styling written reviews */
+        #written-reviews-cont {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        #written-reviews-one {
+         flex-basis: 33%; 
+        }
+        #written-reviews-two {
+          flex-basis: 33%;
+        }
+        #written-reviews-three {
+          flex-basis: 33%;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="outer-cont">
       <!-- this cont will have to be display flex in desktop view -->
-      <div id="desktop-view-top-cont">         
-        <h1>10,000+ of our users love our products.</h1>
+      <div id="desktop-view-top-cont">      
+        <div id="review-title-description">
+          <h1>10,000+ of our users love our products.</h1>
 
-        <p id="description">We only provide great products combined with excellent customer service.
-        See what our satisfied customers are saying about our services.</p>
+          <p id="description">We only provide great products combined with excellent customer service.
+          See what our satisfied customers are saying about our services.</p>
+        </div>     
         <div id="star-reviews-cont">
           <div class="reviews">
             <p class="stars">⭐ ⭐ ⭐ ⭐ ⭐</p>
@@ -142,7 +206,7 @@
       </div>
 
       <div id="written-reviews-cont">
-        <div class="written-reviews">
+        <div class="written-reviews" id="written-reviews-one">
           <div class="review-profile">
             <img class="profile-img" src="images/image-colton.jpg" alt="">
             <p class="review-name">Colton Smith<br><span>Verified Buyer</span></p>
@@ -151,7 +215,7 @@
           Not only did they find the original order, but we also received it in time.
           Excellent!"</p>
         </div> 
-        <div class="written-reviews">
+        <div class="written-reviews" id="written-reviews-two">
           <div class="review-profile">
             <img class="profile-img" src="images/image-irene.jpg" alt="">
             <p class="review-name">Irene Roberts<br><span>Verified Buyer</span></p> 
@@ -159,7 +223,7 @@
           <p class="review-text">"Customer service is always excellent and very quick turn around. Completely
           delighted with the simplicity of the purchase and the speed of delivery."</p>
         </div>  
-        <div class="written-reviews">
+        <div class="written-reviews" id="written-reviews-one">
           <div class="review-profile">
             <img class="profile-img" src="images/image-anne.jpg" alt="">
             <p class="review-name">Anne Wallace<br><span>Verified Buyer</span></p> 
